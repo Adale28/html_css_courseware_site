@@ -240,7 +240,7 @@ footer hr {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height / width * 100%) */
-    height: 0;
+    height: auto;
     overflow: hidden;
 }
 
@@ -607,5 +607,76 @@ hr {
     .flex-column-content p,
     .flex-column-content ul li {
         font-size: 0.95rem;
+    }
+}
+
+
+
+/* --- Spaced Table Styling --- */
+
+.spaced-learning-table {
+    width: 100%; /* Table takes full width of its container */
+    border-collapse: separate; /* CRUCIAL: Allows borders to be separate and border-spacing to work */
+    border-spacing: 15px; /* This adds 15px of space BETWEEN cells (rows and columns) */
+
+    margin: 30px auto; /* Centers the table within its container and adds vertical margin */
+    max-width: 900px; /* Limits the table's maximum width */
+    background-color: #f9f9f9; /* Background color that shows in the gaps */
+    border: 1px solid #ddd; /* A subtle border around the entire table */
+    border-radius: 8px; /* Rounded corners for the table container */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Soft shadow for depth */
+}
+
+/* Styling for Table Headers and Data Cells */
+.spaced-learning-table th,
+.spaced-learning-table td {
+    padding: 15px; /* This adds 15px of space INSIDE each cell, around its content */
+
+    text-align: left; /* Align text to the left */
+    vertical-align: top; /* Align content to the top within cells */
+
+    border: none; /* Border for each individual cell */
+    border-radius: 5px; /* Rounded corners for individual cells */
+    background-color: #fafdff; /* White background for each cell */
+}
+
+/* Table Header Specifics */
+.spaced-learning-table th {
+    background-color: #170841; /* Dark blue header background */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    white-space: nowrap; /* Prevents header text from wrapping too early */
+}
+
+/* Zebra Striping for Table Rows (alternating background colors for rows) */
+.spaced-learning-table tbody tr:nth-child(even) td {
+    background-color: #f8fff8; /* Very light green for even rows */
+}
+
+/* Optional: Hover effect for table rows */
+.spaced-learning-table tbody tr:hover td {
+    background-color: #7a67ac; /* Slightly darker green on hover */
+    color: #ffffff; /* Change text color to white on hover for better contrast */
+}
+
+/* --- Responsive Adjustments for Tables --- */
+/* The .table-responsive wrapper from previous examples is still useful for horizontal scrolling */
+.table-responsive {
+    overflow-x: auto; /* Adds horizontal scrollbar if table content is too wide */
+    /* -webkit-overflow-scrolling: touch; Removed due to lack of support */
+    margin-bottom: 20px; /* Space below the table */
+}
+
+/* Adjust table minimum width for smaller screens if needed to prevent squishing */
+@media (max-width: 768px) {
+    .spaced-learning-table {
+        min-width: 600px; /* Adjust this value if your content gets too squished */
+        border-spacing: 10px; /* Slightly reduce spacing on smaller screens */
+    }
+
+    .spaced-learning-table th,
+    .spaced-learning-table td {
+        padding: 12px; /* Reduce padding inside cells for smaller screens */
+        font-size: 0.9em; /* Slightly reduce font size */
     }
 }

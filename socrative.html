@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socrative Activity</title>
     <link rel="stylesheet" href="style.css">
-    <title>Video Lesson</title>
 </head>
 
 <body>
     <header>
-        <h1>HTML Video Lesson</h1>
+        <h1>Socrative Activity</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,18 +19,23 @@
         </nav>
     </header>
 
-    <section id="lesson">
 
-        <h3>Video Lesson</h3>
-        <p>Watch the video to learn about HTML and how it structures web pages.</p>
+    <section class="activities">
+        <h4>Instructions</h4>
+        <p>Join class with class code: johnson4642</p>
+        <p>steps: <br>
+            1. Open the Socrative Student app or website.<br>
+            2. Enter the class code: johnson4642<br>
+            3. Enter your Full Name<br>
+            4. Click "Done" to start the quiz.
+        </p>
+        <hr>
+        <h3>Socrative Quiz</h3>
         <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" title="HTML Crash Course for Beginners"
-                allowfullscreen></iframe>
+            <iframe src="https://b.socrative.com/login/student/" title="socrative-quiz" allowfullscreen></iframe>
         </div>
-        <span> <button class="back-button" onclick="location.href='Lesson_Html.html'" type="button">Back</button></span>
-        <span> <button class="start-lesson-button" onclick="location.href='Genially.html'"
-                type="button">Next</button></span>
-
+    </section>
+    <section id="activities">
         <h2>Resources</h2>
         <ul>
             <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools - HTML</a>
@@ -41,6 +46,10 @@
                     (PDF)</a></li>
             <li><a href="JSFiddle Instructions.pdf" download>Download JSFiddle Instructions (PDF)</a></li>
         </ul>
+
+        <span> <button class="back-button" onclick="location.href='socrative_lesson.html'" type="button">Back</button></span>
+        <span> <button class="start-lesson-button" onclick="location.href='codepen.html'"
+                type="button">Next</button></span>
     </section>
 
     <footer>
