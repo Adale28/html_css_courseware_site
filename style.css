@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 body {
   font-family: Arial, sans-serif;
@@ -680,3 +681,687 @@ hr {
         font-size: 0.9em; /* Slightly reduce font size */
     }
 }
+=======
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+header {
+  background-color: #004d99;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+/* Default styles for desktop and larger screens */
+nav ul {
+    list-style: none;
+    display: flex; /* Displays list items horizontally */
+    justify-content: center; /* Centers the navigation items */
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Allows nav items to wrap if screen is narrow but not small enough for column */
+}
+
+nav ul li {
+    margin: 0 15px; /* Horizontal spacing for desktop */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 0; /* Add some vertical padding for clickable area */
+    display: block; /* Make the whole area clickable */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+nav ul li a:hover {
+    color: #add8e6; /* Light blue on hover for example */
+}
+
+/* ------------------------------------------- */
+/* Responsive styles for smaller screens (e.g., tablets and mobile) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stacks list items vertically */
+        align-items: center; /* Centers items horizontally when stacked */
+        /* You might want a background color for the mobile menu */
+        background-color: #333; /* Example dark background */
+        width: 100%; /* Ensure it takes full width */
+        padding: 10px 0; /* Add some padding to the top/bottom of the menu */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Vertical spacing for mobile */
+        width: 100%; /* Make list item take full width for better touch targets */
+        text-align: center; /* Center the text within each list item */
+    }
+
+    nav ul li a {
+        padding: 12px 20px; /* Increase padding for larger touch target on mobile */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none; /* No border for the last item */
+    }
+    /* --- Dropdown Menu Styling --- */
+
+/* Parent navigation item that triggers the dropdown */
+nav ul li.dropdown {
+    position: relative; /* Essential for positioning the dropdown content */
+    display: inline-block; /* Keeps it in line with other nav items */
+}
+
+/* Style for the main dropdown button/link (e.g., "Lesson") */
+.dropbtn {
+    /* Inherits styles from nav ul li a, but you can add more here */
+    display: block; /* Make the whole link area clickable */
+    padding: 10px 15px; /* Adjust padding to match your main nav links */
+    text-decoration: none;
+    color: white; /* Or your navigation link color */
+    /* Add any other specific styles for the top-level dropdown link */
+}
+
+/* Dropdown Content (the actual menu with lessons) */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position relative to the parent .dropdown li */
+    background-color: #f9f9f9; /* Background for the dropdown menu */
+    min-width: 200px; /* Minimum width of the dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    z-index: 10; /* Ensure it appears above other content */
+    left: 0; /* Aligns with the left edge of the parent .dropdown */
+    padding: 10px 0; /* Vertical padding inside the dropdown box */
+    border-radius: 5px; /* Slightly rounded corners */
+    list-style: none; /* Remove default list bullets */
+    margin: 0; /* Remove default list margins */
+}
+
+/* Links inside the dropdown content */
+.dropdown-content li a {
+    color: black; /* Text color for dropdown items */
+    padding: 12px 16px; /* Padding for each dropdown item */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the whole area of the list item clickable */
+    text-align: left; /* Align text within the dropdown items */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content li a:hover {
+    background-color: #ddd; /* Light gray background on hover */
+    color: #007bff; /* Example: blue text on hover */
+}
+
+/* Show the dropdown menu when hovering over the parent .dropdown li */
+.dropdown:hover .dropdown-content {
+    display: block; /* Make the dropdown visible on hover */
+}
+
+/* --- Responsive Adjustments for Dropdown --- */
+@media (max-width: 768px) {
+    nav ul li.dropdown {
+        /* On smaller screens, dropdowns often behave differently */
+        /* Make it take full width for easier tapping */
+        width: 100%;
+        text-align: center; /* Center the parent link */
+    }
+
+    .dropdown-content {
+        /* Change position for mobile to stack vertically */
+        position: relative;
+        width: 100%; /* Take full width of parent nav item */
+        box-shadow: none; /* Remove shadow to make it feel part of the nav */
+        padding: 0;
+        border-radius: 0;
+        background-color: #f1f1f1; /* A slightly different background for sub-items */
+    }
+
+    .dropdown-content li a {
+        padding: 10px 0; /* Adjust padding for mobile view */
+        text-align: center; /* Center dropdown items on mobile */
+    }
+
+    /* On mobile, hover might not work well. You'd typically use JavaScript
+       to toggle the dropdown on click. For now, it will still appear on hover
+       if a device supports it, or if touched/tapped (but won't hide until another tap/element is interacted with).
+       If you need click functionality, let me know!
+    */
+}
+}
+
+
+section {
+  padding: 30px;
+  background-color: #fff;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+  color: #004d99;
+}
+footer {
+    text-align: center;
+    padding: 10px; /* Adapts to available space */
+    background-color: #004d99;
+    color: #fff;
+    /* --- Let's discuss these two properties --- */
+    position: relative; /* Often not needed for a standard footer */
+    bottom: 0;          /* Relies on position, might not do what you expect for a general footer */
+    /* ------------------------------------------- */
+    width: 100%; /* KEY for responsiveness: Always spans full width */
+    /* Other properties you might add for full responsive control */
+    box-sizing: border-box; /* Ensures padding/border are included in width */
+    font-size: 1rem; /* Use relative units for text */
+}
+
+footer h2, footer h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+footer a {
+  color: #f0f8ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: #004d99;
+}
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: none;
+}
+
+footer hr {
+  border: 2px;
+  height: 4px;
+  background-color: darkslategray; /* A solid color for the horizontal rule */
+  margin: 20px auto; /* Center it */
+  width: 100%;
+  max-width: 2000px; /* It will be 100% until it reaches 900px, then it stays at 900px */
+  border: White;
+}
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height / width * 100%) */
+    height: auto;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+img, video, iframe {
+    max-width: 100%; /* Ensures they never exceed their parent's width */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Removes extra space below images */
+}
+.course-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if space is limited */
+    gap: 20px;
+    align-items: flex-start;
+}
+.course-content-wrapper > div {
+    flex: 2 1 400px; /* Grow at 2x rate, shrink if needed, try to be at least 400px wide */
+}
+.course-content-wrapper img.course-image {
+      flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis (min-width) */
+    max-width: 100%; /* Ensure image is responsive within its grid cell */
+    height: auto;
+    display: block; /* Removes any extra space below the image */
+}
+
+/* Optional: Add media queries for responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .course-content-wrapper {
+       flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items when stacked */
+    }
+    .course-content-wrapper img.course-image {
+        flex: none; /* Remove flex properties when stacked */
+        width: 80%; /* Adjust width for better look on small screens */
+    }
+    .course-content-wrapper > div {
+        flex: none; /* Remove flex properties when stacked */
+        width: 100%; /* Take full width */
+        text-align: center; /* Center text if desired */
+    }
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
+
+.start-lesson-button {
+    /* Basic Button Styles */
+    background-color: #4CAF50; /* A nice green color */
+    color: white; /* White text */
+    padding: 15px 30px; /* Top/bottom padding 15px, left/right 30px */
+    border: none; /* No default border */
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline if it were a link */
+    display: inline-block; /* Allows padding and margins to work correctly */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 60px 0; /* Margin for spacing around the button */
+}
+
+.start-lesson-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+}
+
+.start-lesson-button:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow to simulate press */
+    transform: translateY(2px); /* Slight downward movement */
+}
+
+.back-button {
+    /* Basic Link-as-Button Styles */
+    background-color: red; /* Light gray background */
+    color: white; /* Dark gray text */
+    padding: 15px 30px;  /* Slightly smaller padding than the main button */
+    border: none #ccc; /* Subtle border */
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Appropriate font size */
+    font-weight: normal; /* Regular weight text */
+    text-align: center;
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block; /* Allows padding and dimensions */
+    margin: 60px 0; /* Margin for spacing around the button */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+.back-button:hover {
+    background-color: #e0e0e0; /* Darker gray on hover */
+    border-color: #bbb; /* Darker border */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+}
+
+.back-button:active {
+    background-color: #d0d0d0; /* Even darker gray when clicked */
+    border-color: #aaa;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Smaller shadow to simulate press */
+    transform: translateY(1px); /* Slight downward movement */
+}
+
+hr {
+  border: none;
+  height: 20px;
+  background-color: #004d99; /* A solid color for the horizontal rule */
+  margin: 20px auto; /* Center it */
+  width: 100%;
+  max-width: 1000px; /* It will be 100% until it reaches 800px, then it stays at 800px */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+        /* Styling for the download link button */
+        .download-button {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            background-color: #007bff; /* Example blue color */
+            color: white;
+            text-decoration: none; /* Remove underline from link */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block; /* Allows padding and width, makes it centerable */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+
+
+        .genially-embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 20px 0; /* Add some margin */
+}
+
+.genially-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- Padlet Embed Styling --- */
+
+/* Main container for the Padlet embed */
+.padlet-embed {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    box-sizing: border-box;
+    overflow: hidden; /* Important to contain the iframe */
+    position: relative;
+    width: 100%; /* Ensures it takes full width of its parent */
+    background: #F4F4F4; /* Light grey background */
+    margin-top: 20px; /* Add some space above the embed */
+    margin-bottom: 20px; /* Add some space below the embed */
+}
+
+/* Paragraph tag directly inside .padlet-embed */
+/* This is primarily used as a wrapper for the iframe for responsive height */
+.padlet-embed p {
+    padding: 0;
+    margin: 0;
+    position: relative; /* For responsive iframe positioning */
+    height: 0; /* Important for aspect ratio trick */
+    padding-bottom: 67.5%; /* Calculated for ~608px height on a 900px wide container.
+                                Adjust this value if you want a different aspect ratio.
+                                For 16:9 aspect ratio, use 56.25%; for 4:3, use 75%. */
+    overflow: hidden; /* Hide any overflow during scaling */
+}
+
+
+/* The Padlet iframe itself */
+.padlet-embed iframe {
+    width: 100%;
+    height: 100%; /* Important for aspect ratio trick */
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none; /* Already `frameborder="0"` in HTML, but good to ensure */
+
+    /* Positioning for responsive height */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Footer div containing the "Made with Padlet" link */
+.padlet-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right (end) */
+    margin: 0;
+    height: 28px; /* Fixed height for the footer bar */
+}
+
+/* The link within the footer */
+.padlet-footer a {
+    display: block;
+    flex-grow: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* The image within the footer link */
+.padlet-footer img {
+    padding: 0;
+    margin: 0;
+    background: transparent; /* No background */
+    border: none;
+    box-shadow: none;
+    width: 114px; /* Ensure original width */
+    height: 28px; /* Ensure original height */
+}
+
+/* --- Responsive Adjustments for Padlet Embed --- */
+
+@media (max-width: 768px) {
+    .padlet-embed p {
+        padding-bottom: 75%; /* On smaller screens, you might want a taller aspect ratio */
+    }
+
+
+
+@media (max-width: 480px) {
+     .padlet-embed p {
+        padding-bottom: 85%; /* Even taller aspect ratio for very small screens */
+    }
+  }
+}
+
+
+
+
+
+
+/* --- Two-Column Flexbox Section Styling --- */
+
+/* Style for the overall section containing the two columns */
+.two-column-flex-section {
+    /* General section spacing and appearance */
+    padding: 40px 20px; /* Padding inside the section */
+    margin: 30px auto; /* Margin outside, centers the section on the page */
+    max-width: 1000px; /* Limits the maximum width of the entire section */
+    background-color: #f9f9f9; /* Light background for the section area */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+/* Style for the heading within this specific section */
+.two-column-flex-section h2 {
+    text-align: center; /* Center the main heading of this section */
+    color: #004d99; /* Matches your other primary headings */
+    margin-bottom: 30px; /* Space below the section heading */
+    font-size: 2.2rem;
+}
+
+
+/* The wrapper that acts as the flex container for the columns */
+.flex-columns-wrapper {
+    display: flex; /* Enables flexbox layout for its direct children (the columns) */
+    flex-wrap: wrap; /* Allows columns to wrap to the next line on smaller screens */
+    gap: 30px; /* Creates space between the columns */
+    justify-content: center; /* Centers columns if there's extra space and they don't fill the row */
+}
+
+/* Styling for each individual column */
+.flex-column-content {
+    flex: 1; /* Each column will grow and shrink to take up equal available space */
+    min-width: 350px; /* Minimum width each column will maintain before wrapping
+                         Adjust this value based on your content and desired breakpoint */
+    padding: 25px; /* Padding inside each column */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+    background-color: #ffffff; /* White background for each individual column box */
+    border-radius: 8px; /* Rounded corners for column boxes */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Subtle shadow for each column box */
+}
+
+/* Headings within the columns */
+.flex-column-content h3 {
+    color: #007bff; /* A blue color for column titles */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 15px; /* Space below column titles */
+    font-size: 1.6rem;
+}
+
+/* Paragraphs within the columns */
+.flex-column-content p {
+    color: #444; /* Dark gray for paragraph text */
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Unordered lists within the columns */
+.flex-column-content ul {
+    list-style: disc; /* Standard bullet points */
+    margin-left: 20px; /* Indent lists */
+    color: #444;
+}
+
+
+/* --- Responsive Behavior for the Two-Column Section --- */
+
+@media (max-width: 768px) {
+    .flex-columns-wrapper {
+        flex-direction: column; /* On screens 768px wide or less, stack columns vertically */
+        gap: 20px; /* Adjust gap when stacked */
+    }
+
+    .flex-column-content {
+        min-width: unset; /* Remove minimum width constraint when stacking */
+        width: 100%; /* Make columns take full width when stacked */
+    }
+    /* Add this to your style.css file */
+.flex-column-image {
+    max-width: 100%; /* Ensures the image never exceeds the width of its parent column */
+    height: auto;    /* Maintains the image's aspect ratio */
+    display: block;  /* Removes extra space often found below images */
+    margin: 0 auto;  /* Centers the image horizontally if it's smaller than the column */
+}
+
+    .two-column-flex-section {
+        padding: 30px 15px; /* Adjust section padding for smaller screens */
+    }
+
+    .two-column-flex-section h2 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+}
+
+@media (max-width: 480px) {
+    .two-column-flex-section h2 {
+        font-size: 1.6rem; /* Further adjust heading size for very small screens */
+    }
+    .flex-column-content h3 {
+        font-size: 1.4rem;
+    }
+    .flex-column-content p,
+    .flex-column-content ul li {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+/* --- Spaced Table Styling --- */
+
+.spaced-learning-table {
+    width: 100%; /* Table takes full width of its container */
+    border-collapse: separate; /* CRUCIAL: Allows borders to be separate and border-spacing to work */
+    border-spacing: 15px; /* This adds 15px of space BETWEEN cells (rows and columns) */
+
+    margin: 30px auto; /* Centers the table within its container and adds vertical margin */
+    max-width: 900px; /* Limits the table's maximum width */
+    background-color: #f9f9f9; /* Background color that shows in the gaps */
+    border: 1px solid #ddd; /* A subtle border around the entire table */
+    border-radius: 8px; /* Rounded corners for the table container */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Soft shadow for depth */
+}
+
+/* Styling for Table Headers and Data Cells */
+.spaced-learning-table th,
+.spaced-learning-table td {
+    padding: 15px; /* This adds 15px of space INSIDE each cell, around its content */
+
+    text-align: left; /* Align text to the left */
+    vertical-align: top; /* Align content to the top within cells */
+
+    border: none; /* Border for each individual cell */
+    border-radius: 5px; /* Rounded corners for individual cells */
+    background-color: #fafdff; /* White background for each cell */
+}
+
+/* Table Header Specifics */
+.spaced-learning-table th {
+    background-color: #170841; /* Dark blue header background */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    white-space: nowrap; /* Prevents header text from wrapping too early */
+}
+
+/* Zebra Striping for Table Rows (alternating background colors for rows) */
+.spaced-learning-table tbody tr:nth-child(even) td {
+    background-color: #f8fff8; /* Very light green for even rows */
+}
+
+/* Optional: Hover effect for table rows */
+.spaced-learning-table tbody tr:hover td {
+    background-color: #7a67ac; /* Slightly darker green on hover */
+    color: #ffffff; /* Change text color to white on hover for better contrast */
+}
+
+/* --- Responsive Adjustments for Tables --- */
+/* The .table-responsive wrapper from previous examples is still useful for horizontal scrolling */
+.table-responsive {
+    overflow-x: auto; /* Adds horizontal scrollbar if table content is too wide */
+    /* -webkit-overflow-scrolling: touch; Removed due to lack of support */
+    margin-bottom: 20px; /* Space below the table */
+}
+
+/* Adjust table minimum width for smaller screens if needed to prevent squishing */
+@media (max-width: 768px) {
+    .spaced-learning-table {
+        min-width: 600px; /* Adjust this value if your content gets too squished */
+        border-spacing: 10px; /* Slightly reduce spacing on smaller screens */
+    }
+
+    .spaced-learning-table th,
+    .spaced-learning-table td {
+        padding: 12px; /* Reduce padding inside cells for smaller screens */
+        font-size: 0.9em; /* Slightly reduce font size */
+    }
+}
+>>>>>>> Stashed changes

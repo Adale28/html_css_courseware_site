@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 index
 objectives
 lesson_html
@@ -20,3 +21,27 @@ Socrative
 
 Next3
 
+=======
+index
+objectives
+lesson_html
+html_video
+Genially
+JSFiddle
+Padlet_share
+
+Next
+
+Lesson_CSS
+css_video
+padlet
+
+
+Next2
+
+Socrative_lesson
+Socrative
+
+Next3
+
+>>>>>>> Stashed changes

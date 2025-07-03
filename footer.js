@@ -1,0 +1,52 @@
+class MyFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+           <footer>
+    <h2>Credits</h2>
+    <p>Courseware developed by IT Professionals Institute, Adale Johnson Vjam Solutions. All rights reserved.</p>
+    <p>&copy; 2025 IT Professionals Institute. All rights reserved.</p>
+    <hr>
+    <div class="footer-flex">
+      <div class="footer-column">
+        <h4>Follow Us: Comming Soon</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/itprofessionalsinstitute" rel="noopener" target="_blank">Facebook</a>
+          </li>
+          <li><a href="https://www.instagram.com/itprofessionalsinstitute" rel="noopener" target="_blank">Instagram</a>
+          </li>
+          <li><a href="https://www.linkedin.com/company/itprofessionalsinstitute" rel="noopener"
+              target="_blank">LinkedIn</a>
+          </li>
+          <li><a href="https://www.youtube.com/@itprofessionalsinstitute" rel="noopener" target="_blank">YouTube</a>
+          </li>
+        </ul>
+        <h4>Site Map</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="objectives.html">Objectives</a></li>
+          <li><a href="Leson_Html.html">Lesson Html</a></li>
+          <li><a href="Lesson_CSS.html">Lesson CSS</a></li>
+          <li><a href="Activity.html">Padlet Reflection</a></li>
+          <li><a href="Assessment.html">Assessment</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About Us:</h4>
+        <p>IT Professionals Institute is dedicated to providing high-quality, interactive courseware for
+          aspiring web
+          developers. Our mission is to empower learners with the skills they need to succeed in the tech
+          industry.</p>
+        <p>For more information, visit our website or contact us directly.</p>
+        <h4>Contact:</h4>
+        <p>Email - adalejohnson@gmail.com</p>
+        <p>Phone - (876) 420 6885</p>
+      </div>
+    </div>
+  </footer>
+        `;
+    }
+}
+
+customElements.define('my-footer', MyFooter);
