@@ -8,7 +8,7 @@ class MyFooter extends HTMLElement {
     <hr>
     <div class="footer-flex">
       <div class="footer-column">
-        <h4>Follow Us: Comming Soon</h4>
+        <h4>Follow Us: Coming Soon</h4>
         <ul>
           <li><a href="https://www.facebook.com/itprofessionalsinstitute" rel="noopener" target="_blank">Facebook</a>
           </li>
